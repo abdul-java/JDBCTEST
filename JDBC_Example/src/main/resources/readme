@@ -1,0 +1,39 @@
+# sql
+#create table in database.
+
+CREATE SCHEMA `jdbc_example` ;
+
+CREATE TABLE `jdbc_example`.`emp` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `salary` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+  
+  
+  // stored procedure query
+  
+  CREATE DEFINER=`root`@`localhost` 
+  PROCEDURE `insertValue`(name varchar(45), salary varchar(10))
+BEGIN
+insert into emp value(name,salary);
+END
+
+
+
+// for storing image into the database
+
+CREATE TABLE `jdbc_example`.`picture` (
+  `imageId` INT NOT NULL,
+  `picture` BLOB NULL,
+  PRIMARY KEY (`imageId`));
+  
+ 
+ // for storing file into the database
+
+CREATE TABLE `jdbc_example`.`filedb` (
+  `fileId` INT NOT NULL,
+  `name` MEDIUMTEXT NULL,
+  PRIMARY KEY (`fileId`));
+  
+  
+  
